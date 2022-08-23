@@ -5,7 +5,7 @@ export const postModule = {
         posts: [],
         isPostsLoading: false,
         selectedSort: '',
-        searchQuarty: '',
+        searchQuerty: '',
         page: 1,
         limit: 10,
         totalPages: 0,
@@ -21,7 +21,7 @@ export const postModule = {
                     ?.localeCompare(post2[state.selectedSort]))
         },
         sortedAndSearchedPosts(state, getters) {
-            return getters.sortedPosts.filter(post => post.title.toLowerCase().includes(state.searchQuarty.toLowerCase()))
+            return getters.sortedPosts.filter(post => post.title.toLowerCase().includes(state.searchQuerty.toLowerCase()))
         }
     },
     mutations: {
@@ -40,8 +40,8 @@ export const postModule = {
         setTotalPages(state, totalPages) {
             state.totalPages = totalPages
         },
-        setSearchQuarty(state, searchQuarty) {
-            state.searchQuarty = searchQuarty
+        setSearchQuerty(state, searchQuerty) {
+            state.searchQuerty = searchQuerty
         },
     },
     actions: {
